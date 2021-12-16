@@ -1,11 +1,12 @@
 
 <div class="flex">
     <div>
-        <img class="w-48 h-48 object-cover object-center rounded-full" src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" >
+        <img class="w-48 h-48 object-cover object-center rounded-full" src="{{$image}}" >
         <div class="bg-indigo-700 mt-10">
             <p class="text-white text-lg px-5 py-2">Name: <span>{{$name}}</span></p>
             <p class="text-white text-lg px-5 py-2">Admission: <span>{{$reg}}</span></p>
-            <p class="text-white text-lg px-5 py-2">Course: <span>DIT</span></p>
+            <p class="text-white text-lg px-5 py-2">Course: <span>{{$course}}</span></p>
+            <p>{{$studentName}}</p>
         </div>
     </div>
 
@@ -15,20 +16,22 @@
             <h1 class="font-bold">CURRENT SEMESTER PERFORMANCE</h1>
         </div>
         <div class="flex space-x-10 text-white text-lg justify-evenly">
-            <div class="bg-indigo-700 p-2">Web 1</div>
-            <div class="bg-indigo-700 p-2">Entrepreneurship</div>
-            <div class="bg-indigo-700 p-2">Database</div>
-            <div class="bg-indigo-700 p-2">Operating System</div>
+            <div class="bg-indigo-700 p-2">{{$unit1}}</div>
+            <div class="bg-indigo-700 p-2">{{$unit2}}</div>
+            <div class="bg-indigo-700 p-2">{{$unit3}}</div>
+            <div class="bg-indigo-700 p-2">{{$unit4}}</div>
+            <div class="bg-indigo-700 p-2">{{$unit5}}</div>
         </div>
         <div class="flex space-x-10 text-black text-lg justify-evenly mt-1 pb-20">
-            <div class="bg-white px-4 py-2">A</div>
-            <div class="bg-white px-4 py-2">A</div>
-            <div class="bg-white px-4 py-2">A</div>
-            <div class="bg-white px-4 py-2">A</div>
+            <div class="bg-white px-4 py-2">{{$marks1}}</div>
+            <div class="bg-white px-4 py-2">{{$marks2}}</div>
+            <div class="bg-white px-4 py-2">{{$marks3}}</div>
+            <div class="bg-white px-4 py-2">{{$marks4}}</div>
+            <div class="bg-white px-4 py-2">{{$marks5}}</div>
         </div>
 
         <div class="bg-white p-6 mt-10">
-            <p>Teacher's comment</p>
+            <p>{{$comment}}</p>
         </div>
     </div>
 

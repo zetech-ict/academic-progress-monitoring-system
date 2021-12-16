@@ -11,7 +11,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form class="space-y-3" method="POST" action="{{ route('store-user') }}">
+        <form class="space-y-3" method="POST" action="{{ route('store-user') }}" enctype="multipart/form-data">
         @csrf
 
             <div class="grid grid-cols-3">
@@ -31,8 +31,8 @@
                 <x-input id="password" class="col-span-2 block mt-1 w-full" type="password" name="password" :value="old('password')" required />
             </div>
             <div class="grid grid-cols-3">
-                <label for="myfile">Select a file:</label>
-                <input type="file" id="myfile" name="myfile">
+                <label for="image">Select a file:</label>
+                <input type="file" id="image" name="image">
             </div>
             <div class="grid grid-cols-3">
                 <div class="col-span-1"></div>

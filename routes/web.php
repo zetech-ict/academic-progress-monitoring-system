@@ -18,6 +18,8 @@ Route::get('/', [\App\Http\Controllers\SiteController::class, 'home'])->name('ho
 Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
 Route::post('/dashboard', [\App\Http\Controllers\DashboardController::class, 'storeUser'])->middleware(['auth'])->name('store-user');
 
+Route::post('/save', [\App\Http\Controllers\StudentController::class, 'store'])->name('save_student');
+Route::get('/edit', [\App\Http\Controllers\StudentController::class, 'edit'])->name('edit_student');
 require __DIR__.'/auth.php';
 
 
